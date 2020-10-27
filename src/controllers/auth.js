@@ -17,7 +17,7 @@ const autenticar = async (ctx) => {
 		if (comparacao) {
 			const token = await jwt.sign(
 				{ email: emailCad.email },
-				process.env.SECRET || 'desafioBack',
+				process.env.JWT_SECRET || 'desafioBack',
 				{
 					expiresIn: '1000000',
 				}
